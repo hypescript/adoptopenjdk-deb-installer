@@ -47,7 +47,7 @@ sudo update-java-alternatives -s adoptopenjdk-11-jre-openj9
 # add my key to trusted APT keys 
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A66C5D02
 # add the package repo to sources 
-echo 'deb https://rpardini.github.io/adoptopenjdk-deb-installer stable main' > /etc/apt/sources.list.d/rpardini-aoj.list 
+echo 'deb https://rpardini.github.io/adoptopenjdk-deb-installer stable main' | sudo tee /etc/apt/sources.list.d/rpardini-aoj.list 
 # update from sources
 sudo apt-get update 
 # install a JDK, see above instructions for Ubuntu for other variants as well
